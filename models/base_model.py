@@ -9,13 +9,13 @@ from datetime import datetime
 
 class BaseModel:
     """
-        BaseModel class that defines common attributes and methods for other classes.
+        BaseModel class.
     """
     def __init__(self):
         """
-            Initializes a new instance of the BaseModel class.
-              - Assigns a unique id using uuid.uuid4() converted to a string.
-              - Sets the created_at and updated_at attributes to the current datetime.
+            Initializes new instance of BaseModel class.
+              - a unique id using uuid.uuid4() converted to a string.
+              - created_at and updated_at attributes to current datetime.
         """
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
@@ -24,7 +24,6 @@ class BaseModel:
     def __str__(self):
         """
             Returns a string representation of the BaseModel object.
-            The string includes the class name, id, and the object's dictionary representation.
         """
         return "[{}] ({}) {}".format(
             self.__class__.__name__,
@@ -41,8 +40,6 @@ class BaseModel:
     def to_dict(self):
         """
             Returns a dictionary representation of the BaseModel object.
-            The dictionary includes all attributes of the object, including the class name, id,
-            and the converted string representations of created_at and updated_at attributes.
         """
         obj_dict = self.__dict__.copy()
         obj_dict['__class__'] = self.__class__.__name__
