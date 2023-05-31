@@ -1,1 +1,3 @@
-readme file forthis project-web_static
+readme file for this project - AirBnB clone
+web_static
+client side
