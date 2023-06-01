@@ -4,6 +4,10 @@
   width: 100%;
   border: 1px solid #DDDDDD;
   border-radius: 4px;
+  margib: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 button {
@@ -16,6 +20,7 @@ button {
   color: #FFFFFF;
   position: relative;
   margin-right: 30px;
+}
   
   button:hover {
     opacity: 0.9;
